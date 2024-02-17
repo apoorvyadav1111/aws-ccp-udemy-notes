@@ -11,4 +11,4 @@
   - infra
   - regions, AZs, edge locations
 
-  When u use was, you agree to their usage policy, which basically means not to do bad stuff using them.
+  When you use aws, you agree to their usage policy, which states not to do bad stuff using them.
