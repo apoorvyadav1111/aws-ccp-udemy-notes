@@ -10,7 +10,7 @@ Users are  people from the organization and can be grouped together. Groups can 
 - Users or Groups can be assigned json documents called **policies**.
 ```
 {
-  "Version":"2024-01-01",
+  "Version":"2012-10-17",
   "Statement": [
       {
         "Effect":"Allow",
