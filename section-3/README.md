@@ -1,4 +1,4 @@
-# Section - 3 Index
+# Section - 3 
 ---
 ### Traditional IT Overview
 
