@@ -142,5 +142,133 @@ Using Root
 
 Can assign up to 8 devices at one time. 
 
+---
+
+# AWS Access Keys, CLI & SDK
+
+### How can users access AWS?
+- AWS management console: protected by pwd & MFA
+- AWS CLI: protected using access keys
+- AWS SDK: protected by access keys
+
+Don't share the access keys, they are generated through the console and are like passwords.
+
+### What's the AWS CLI?
+- Direct access to the public access to the AWS
+- can create scripts
+- open source
+
+### What's the AWS SDK?
+- language-specific APIs
+- access and manage AWS using code
+- within your  app
+- supports, js, python, PHP, .net, Ruby, Java, Go, Node.js, C++, Android, iOS, Embedded C, Arduino
+- Example: AWS Cli is built on AWS SDK for Python
+  
+---
+
+# AWS CLI Setup on Mac
+
+**Skipped for Windows and Linux**
+
+- Search ```install aws cli mac```
+- Click on the official URL stating installation of **VERSION 2**
+- Download the GUI installer, continue and agree to the terms
+- Install for all the users on the computer
+- Go to the terminal and type:
+  ```aws --version```
+---
+
+# AWS CLI Hands-on
+- Go to IAM > Users > User > Security Credentials > Create Access Key
+- Select CLI and download .csv
+- This is the only time you will have access to the key
+- Go to Terminal, enter ```aws configure```
+- Enter all the values and can skip default format
 
 ---
+
+# AWS Cloudshell
+- Not available in all regions
+- CLI available in cloud on aws
+- Can create and save files, as they stick after the sessions
+- can download and upload file from/to cloudshell env
+- can have multiple tabs
+
+
+--- 
+
+# IAM roles for AWS Services
+
+- some services will need to perform actions on your behalf
+- to do this, we need to assign permissions to aws services with IAM roles
+- example, an ec2 instance to do some work
+- common roles: ec2 instance roles, lambda function roles, cloud formation roles
+
+---
+
+# IAM Roles Hands On
+
+On root,
+- go to IAM > Roles > Create role
+- Select **AWS Service**
+- Choose use service: choose **EC2**
+- Add policy, add **IAMReadOnlyAccess** for now
+- Add role name
+- Review
+
+---
+
+# IAM Security Tools
+
+- IAM Cred Report (account-level)
+  list all account users and status of their credentials
+- IAM Access Advisor (user-level)
+  shows the service permissions granted to a user and when those services were last accessed.
+
+---
+
+# IAM Security tools hands on
+Using root:
+- IAM > Credential Report> Download CSV File
+- Users > User > Access Advisor
+
+---
+
+# IAM Best practices
+
+- Don't use root except for aws account setup
+- physical user  == aws user
+- assign groups and assign to the group
+- create a strong password policy
+- use MFA
+- use roles
+- use access keys for CLI
+- Audit using cred report and access advisor
+
+---
+
+# Shared Responsibility Model for IAM
+
+**We get a lot of questions on this in the exam**
+
+- AWS is responsible for : infra, configuration and vulnerablity analysis, compliance validation
+- You are responsible for:
+  - Users, Groups, Roles, Policies management and monitoring
+  - MFA on all accounts
+  - Rotation of keys
+  - IAM tools to apply for permissions
+  - Access patterns and review permissions
+
+--- 
+
+  
+
+
+
+
+
+
+
+
+
