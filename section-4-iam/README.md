@@ -1,6 +1,7 @@
 # Section 4: IAM
 
 [🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
 ---
 
 # IAM Users and Groups
@@ -82,7 +83,7 @@ Once created we can see users and groups. User can be seen having permission but
  
     ---
 
-    # IAM Policies Hands On
+# IAM Policies Hands On
 
 - Updating Permissions of a user
   - Using Root, go to the IAM>Groups>admin
@@ -101,7 +102,7 @@ Now the user will be able to see the list of users and groups and their details 
 
   ---
 
-  # IAM - MFA
+# IAM - MFA
 
 **Password Policy**
 - can setup a pwd policy: length, specific char type
@@ -121,7 +122,7 @@ Now the user will be able to see the list of users and groups and their details 
   ---
 
 
-  # IAM MFA Hands On
+# IAM MFA Hands On
 
 **Password Policy**
 Using Root:
