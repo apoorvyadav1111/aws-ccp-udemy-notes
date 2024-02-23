@@ -61,7 +61,7 @@ Key takeaways:
 - key pair for login
   - create a key
   - select rsa
-  - select .ppm if mac, linux or windows 10+
+  - select .pem if mac, linux or windows 10+
 - check the allow Http traffic from internet in network
 - click on advanced and scroll down to the user data
 - paste the start up code here
@@ -161,6 +161,142 @@ When we allow another SG, any instance with that SG are allowed for inbound acce
 
 ---
 
+# 39: SSH Overview
+
+- SSH can be used using mac, linux, Windows 10+
+- Putty can be used to connect via any windows
+- EC2 instance connect can be used for any operating system, but only works for Amazon Linux
+
+**will skip next lectures for windows and windows 10**
+
+---
+
+# 40: How to SSH using Linux or Mac
+
+- Create a folder named ```aws``` or similar
+- move the .pem file downloaded before into this folder
+- copy public ip address of the ec2 instance running
+- ensure that inbound traffic for port 22 is allowed for ssh
+- open a terminal in the folder created
+  - enter command ```ssh -i <filename>.pem ec2-user@<public-ip>```
+  - We fill face an error saying bad permissions
+  - Change the permissions using: ```chmod 0400 <filename>.pem```
+  - try again, you should be logged in
+  - type ```exit``` to exit
+
+Remember, restarting your instance may change ur public IP, hence, you have to note the IP everytime you do ssh into ur instance
+
+---
+
+# 44: EC2 Instance Connect
+
+alternative to ssh for connecting to ec2.
+
+- Go to EC2 > click on the instance > Connect on the upper nav
+- Click EC2 instance connect
+- Click on connect
+
+It opens a new tab. Its just as we are SSHing the instance from the terminal.
+
+- It still requires us to configure the security group to accept SSH inbound traffic on port 22.
+
+---
+
+# 45: EC2 Instance Demo
+Use IAM user
+- Connect to the instance using anything
+- it has aws cli installed
+- But we cannot use it until we configure it.
+- But configuring it requires us to use access key and secret key, which should not be entered in the instance. It will allow anyone using the ec2 instance run commands using your keys
+- Instead do the following:
+  - Go to IAM and create a role as per the needs, we created a demo role with one IAMReadOnlyAccess policy
+  - Go to the instance, click on actions > security > modify iam role > choose the role > update / save
+- now we can run commands that are allowed as per the role attached
+
+---
+
+# 46: EC2 Instance Purchasing Options
+- On-Demand: short workload, predictable pricing, pay by second
+- Reserved: 1 & 3 Years
+    - long workloads
+    - convertible reserved instances: long workloads with flexible instances
+- Savings Plans: 1 & 3 Years
+    - commitment to an amount of usage, workload
+- Spot Instances: short workloads, cheap, but less reliable, can lose them
+- Dedicated Hosts: book an entire physical server, control instance placement
+- Dedicated Instances: no other customers will share your hardware
+- Capacity Reservations: reserve capacity in a specific AZ for any duration
+
+### EC2 on demand
+- linux/windows: billing per second
+- all others: billing per hour
+- highest cost
+- no long term commitment
+
+  
+### Reserved Instances
+- up to 72% discount as compared to ON-demand
+- reserve specific instance attributes
+- period: 1 year or 3 years
+- payment: no upfront, partial, or all upfront
+- scope: zone or region
+- steady-state usage apps
+- can buy or sell in AWS Marketplace
+  - Convertible reserved: can change the attributes like type, family, OS, scope and tenancy
+  - up to 66% discount
+
+### EC2 Saving Plans
+- based on long term usage (up to 72%)
+- Commit to certain type of usage ($10/hr for 1 or 3 year)
+- Usage beyond the plan is billed on demand
+- locked to instance family & Region
+- flexible in size, OS, tenancy
+
+### Spot Instances
+- up to 90%
+- can lose them any time
+- workloads resilient to failures like batch, data analysis, image processing, distributed workload, workload with flexible schedule
+- not suited for critical jobs/databases
+**exam will test on this about what can be ran on these**
+
+### Dedicated Hosts
+- physical server with capacity full dedicated to ur use
+- can cater to compliance requirements and existing software licences (per socket, per core, per VM software licenses)
+- purchase:
+  - on demand
+  - reserve 1 or 3 years
+- most expensive
+- useful for software with BYOL model
+- or strong compliance or regulation needs
+
+### Dedicated Instances
+- h/w is dedicated to you
+- may share h/w with other instances in same account
+- no control over instance placement
+
+### EC2 capacity reservations
+- reserve on-demand instances capacity in a specific az for any duration
+- you will always have ec2 instance capacity when u need
+- **no time commitment, no billing discount**
+- can combine with regional reserved instances and savings plans to benefit from billing discounts
+- **charged with on-demand rate whether or not instances are running**
+
+--- 
+
+# 47: Shared Responsibility Model for EC2
+
+AWS manages: Infra, isolation on physical hosts, replacing faulty hardware, compliance validation
+
+You manage:
+- SG Rules
+- OS patches and updates
+- software and utilities
+- IAM roles attached to EC2
+- data security on the instance
+
+--- 
+
+  
 
 
 
