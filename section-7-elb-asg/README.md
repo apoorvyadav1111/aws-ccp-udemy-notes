@@ -74,3 +74,24 @@ static DNS(URL) | static IP via elastic IP | intrusion detection
 
 ---
 
+# 66: ASG Overview
+
+- load can vary over time
+- can create new servers in cloud
+- goal of ASG:
+  - scale out (add ec2)
+  - scale in (remove ec2)
+  - ensure we have a min and max number of instances running
+  - automatically register new instances to LB
+  - replace unhealthy instances
+### ASG in AWS
+- can define
+  - min size: 1
+  - desired size
+  - max size:
+- work hand in hand with LB
+- LB will send traffic to new ones being registered
+
+---
+
+# 67: ASG Hands On
