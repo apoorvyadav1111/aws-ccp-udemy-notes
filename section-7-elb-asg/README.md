@@ -95,3 +95,16 @@ static DNS(URL) | static IP via elastic IP | intrusion detection
 ---
 
 # 67: ASG Hands On
+- terminate the old 2 instances if not yet
+- go to ASG and click create autoscaling groups
+- Create a Launch Template (tells ASG on how to create the instances) > keeps options same as while creating ec2 instance so far
+- select the launch template we just created
+- select the zones
+- chose existing LB and select the target group
+- chose desired: 2, min: 1, max 4
+- keep everything else same
+- Create ASG
+
+- check instances, target groups for new instances being created
+- check the dns from the ALB
+- try terminating one instance, our ASG will automatically create a new one
