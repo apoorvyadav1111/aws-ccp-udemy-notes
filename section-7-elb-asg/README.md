@@ -1,5 +1,7 @@
 # Section 7: ELB and ASG
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
 # 63: High Availabilty, Scalability, Elasticity
 - Scalable: handle greater loads
   - Vertical
@@ -108,3 +110,23 @@ static DNS(URL) | static IP via elastic IP | intrusion detection
 - check instances, target groups for new instances being created
 - check the dns from the ALB
 - try terminating one instance, our ASG will automatically create a new one
+
+---
+
+# 68: ASG: Scaling Strategies
+- manual scale, update the size
+- dynamic scale: respond to changing demand
+  - simple/ step:
+    - when cloudwatch alarm is triggered (ex: cpu>70%) then add 2 units
+    - when cloudwatch alarm is triggered (ex: cpu<30%) then remove 1 unit
+  - Target Tracking Scaling
+    - Ex: I want the ASG CPU to stay around 40%
+  - Scheduled Scaling
+    - Anticipate a scaling based on known usage patterns
+    - ex: increase the min capacity to 10 at 5 pm Friday
+  - Predictive Scaling:
+    - use ML to predict future traffic ahead of time
+    - auto provision the right number of EC2 in advance
+    - helpful in time based patterns
+
+  ---
