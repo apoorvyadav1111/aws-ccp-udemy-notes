@@ -60,4 +60,17 @@ http/https/gRPC | tcp/udp proto | GENEVE proto on IP packets
 http routing features | high perf, mil req per sec | route traffic to firewalls that you manage on ec2 instances |
 static DNS(URL) | static IP via elastic IP | intrusion detection
 
+---
+
+# 65: ALB Hands on
+
+- Launch 2 instances, paste same user data
+- check the instance by going to the public IP
+- go to load balances > create load balancer > alb
+- give name > select all az
+- create a new security group allowing only http inbound and all outbound
+- create a new target group with instances and keep all defaults, add ur instances > click on **include pending from below**
+- create the ALB and check the dns
+
+---
 
