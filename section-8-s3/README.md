@@ -45,3 +45,28 @@
 
 # 72: S3 hands on
 
+- go to s3 > Create Bucket
+- give a unique name
+- choose a region
+- disable ACL
+- set all other default
+
+in the view,we can see all the buckets in all regions but buckets are confined to one region only
+
+- upload a file
+- public url should not work for now
+- create a folder named images
+- upload another image in new folder
+
+---
+
+# 73: S3 Security: Bucket Policy
+
+- User Based:
+  - IAM policies: which api calls should be allowed for a specific user from IAM
+ 
+- Resource Based:
+  - Bucket Policies: bucket wide rules from s3 console, allows cross account
+  - Object Access Control List (ACL): finer grain (can be disabled)
+  - Bucket Access Control List (ACL): less common (can be disabled)
+
