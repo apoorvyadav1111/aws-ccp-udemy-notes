@@ -209,3 +209,64 @@ freq access | less access than standard, cheaper | data lost when AZ destoyed
 low latency & high thruput | | 11 9s durable in one zone | 
 sustain 2 concurrent facility failures | | |
 big data analytics, mobile and gaming apps, content dist | disaster recovery, backups | store secondary copies of on premise data or something u can recreate |
+
+### Amazon s3 glacier storage classes 
+- low cost for archiving and backup
+- price for storage + data retrieval
+- S3 Glaciel Instant Retrieval
+  - millisecond retrieval, great for data accessed once a quarter
+  - minimum storage duration of 90 days
+- S3 Glacier Flexible Retrieval (Formarly S3 Glacier) Minimum storage duration for 90 days
+  - expedited ( 1 to 5 mins)
+  - standard ( 3 to 5 hours)
+  - Bulk (5 to 12 hours) free
+- S3 Glacier Deep Archive - for long term storag
+  - standard : 12 hours
+  - bulk: 48 hours
+  - minimum storage days of 180 days
+ 
+### S3 intelligent tiering
+- small monthly monitoring and auto tier fee
+- moves object automatically based on usage
+- no charges in s3 intelligent tiering
+- no retrieval charges
+
+- Frequent Access Tier (automatic): default tier
+- infrequent A T (auto): objects not accessed for 30 days
+- Archive Instant A T (auto): objects not accessed for 90 days
+- Archive A T (optional): configurable from 90 days to 700+ days
+- Deep Archive A T (optional): configurable from 180 days to 700+ days
+
+### S3 Price Comparision
+- Cheapest and instant is One Zone IA
+
+
+**IMP: Study from AWS for new classes**
+---
+
+# 82: Storage Classes Hands On
+- Create a new bucket with defaults
+- Upload a file in the bucket, in properties > select Standard-IA
+- Can go to the object's property and edit the storage class, eg to One Zone IA
+- Can create a lifecycle rule in bucket's properties > create a lifecycle rule
+
+--- 
+
+# 83: S3 Encryption
+- Server Side encryption
+  - when uploaded, an object is encrypted by server
+- Client Side Encryption: from client
+
+Both options are there, but server side is by default enabled
+
+---
+
+# 84: IAM Access Analyzer for S3
+- ensures that only intended people have access to your s3 buckets
+- evaluates s3 bucket policies, s3 acls, s3 access point policies
+- powered by IAM access analyzer
+
+---
+
+
+  
