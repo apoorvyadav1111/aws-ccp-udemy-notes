@@ -268,5 +268,160 @@ Both options are there, but server side is by default enabled
 
 ---
 
+# 85: Shared responsibility model for S3
+- AWS
+  - Infra, global security, durability, availability, sustain, concurrent loss of data in two facilities
+  - configuration and vulnerability analysis
+  - compliance validation
+- Personal
+  - S3 Versioning
+  - S3 Bucket Policies
+  - S3 Replication Setup
+  - Logging and Monitoring
+  - S3 storage Classes
+  - data encryption at rest and in transit
 
-  
+--- 
+
+# 86: AWS Snow Family
+- highly secure, portable device to **collect and process data at the edge and migrate data in and out of the aws**
+- Data Migration:  Snowcone, Snowball edge and snowmobile
+- Edge Compute: Snowcone and Snowball edge
+
+### Data Migrations with AWS Snow Family
+- 100TB on 100Mbps -> 12 days
+- Challenges:
+  - limited connectivity
+  - limited B/W
+  - high n/w cost
+  - shared b/w
+  - connection stability
+- snow family are offline devices to perform data migrations
+- if it takes more than a week for uploading, use snow mobile
+
+- AWS delivers, and we ship back to the AWS Facility
+- They take and plug into their infra
+
+### Snowball Edge: up to 24 TB use
+- TBs or PBs of data in/out of AWS
+- Pay per data transfer job
+- provide block storage and s3 compatible object storage
+- Snowball storage optimized: 80TB of HDD
+- Snowball Compute optimized: 42TB of HDD or 28TB of NVMe capacity
+- Use Case: large data cloud migration, DC decommission, disaster recovery
+
+### Snowcone and Snowcone SSD up to 80TB use
+- small portable computing rugged and secure
+- light 2.1 kgs 4.5 lbs
+- used for storage, edge computing and data transfer
+- snowcone - 8TB of HDD
+- snowcone ssd - 14TB of SSD
+- use snowcone when snowball does not fit (space)
+- need your own battery / cables
+- can be sent back to AWS or connect it to internet and use **AWS Datasync** to send data
+- 
+
+### Snowmobile upto 1 EB
+- transfer: 1EB = 1000PB = 1MilTBs
+- Each snowmobile have 100PB Capacity use multiple in parallel
+- High security, temp controlled, GPS, 24/7 video surveillance
+- Better to use when have more than 10 PB of data
+- 
+
+### Snowmobile usage process
+- request
+- install snowball client/ aws opshub on server
+- connect the snowball and copy using the client
+- ship back the device
+- data is loaded
+- complete wipe
+
+### Edge Computing
+- process data while being created at the edge location
+- edge location: remote, disconnected from internet or computing power, ex: ships, mines, trucks
+- we setup snowball or snowcone
+- uses:
+  - preprocess data
+  - ML at the edge
+  - transcoding media stream
+- then ship back to AWS
+
+- Snowcone & snowcone SSD
+  - 2 CPUs, 4GBs of memory, wired or wireless
+  - USB-C power using a cord or optional battery
+- Snowball Edge - Compute optimized
+  - 104 vCPUs 426 GB of RAM
+  - Optional GPU
+  - 28TB NVMe or 42 TB HDD
+  - Storage clustering is available
+
+- All : can run ec2 instances & AWS lambda fx using AWS IoT greengrass
+- long term deployment options: 1 or 3 years discounted pricing
+
+### AWS OPSHUB
+- historically, you needed aws cli
+- now we can use **opshub** to manage the snow family device
+- unlocking and configuring single or clustered device
+- transfer files
+- launch and manage instances
+- monitor device metrics
+- launch compatible aws services like ec2 instances, aws datasync, NFS
+
+---
+
+# 87: AWS SnowFamily Hands On
+- Go to Snow Family Console
+- click order
+- give jobname
+- choose job type
+- choose snow device
+- pricing option
+- add ami
+- select buckets
+- choose the encryption key
+- grant access and create a service role
+- choose address, ship speed
+- 
+
+---
+
+# 88: AWS Snowball Edge Pricing
+
+- usage of the device + data transfer  out of the AWS
+- data in to AWS is **free**
+- on demand
+  - one time service fee per job
+    - 10 days of usage for snowball edge storage optimized 80TB
+    - 15 days of usage for snowball edge storage optimized 210TB
+  - shipping days are not included in 10 or 15 days
+- committed up-front
+  - pay in advance: monthly, 1 year or 3 years usage (edge computing)
+  - up to 62% discount
+ 
+---
+
+# 89: Storage Gateway Overview
+
+- AWS is pushing for hybrid cloud
+- Can be due to
+  - long cloud miggrations
+  - security
+  - compliance
+  - IT strategy
+- S3 is proprietary tech, so how to expose it?
+- AWS Storage Gateway:
+
+- Storage Cloud Native options
+- Block: EBS, EC2 instance store
+- File: EFS
+- Object: S3, Glacier
+
+- Storage Gateway b/w on premise data + cloud data in S3
+- use case: disaster recovery, backup and tiered storage
+- Types:
+  - File gateway
+  - Volume gateway
+  - Tape Gateway
+- from on premise to EBS, S3, Glacie
+
+---
