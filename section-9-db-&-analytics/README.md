@@ -1,4 +1,4 @@
-# Section 7: Database & Analytics
+# Section 9: Database & Analytics
 
 # 91: Database Introduction
 - storing data on disk(efs,ebs,ec2 is,s3) can have its limits
@@ -183,4 +183,121 @@ All data is in one db and no way to join it
 - users can write into any region and is actively synced in anther region
 
 ---
+
+# 99: Redshift Overview
+
+- based on postgres, but used for OLAP
+- load data per hour rather than every second
+- 10X better performance than other, scale PBs of data
+- Columnal storage
+- Parallel Query Execution
+- Has a SQL interface
+- BI tools integrated with it like AWS Quicksight and Tableau
+
+### Redshift serverless
+- auto provision and scales data warehouse
+- run analytics without managing infra
+- pay for what you use
+- use case: reporting, dashboarding, real time analytics
+
+---
+
+# 100: EMR Overview
+- Elastic Map Reduce
+- Hadoop Cluster/ Big Data
+- made of hundreds of EC2 instances
+- Apache Spark, HBase, Presto
+- EMR, takes care of the provisioning and configuring
+- Use case: data processing, ML, web indexing, big data
+
+---
+
+# 101: Athena Overview
+- serverless query service to perform analytics against s3 objects
+- uses standard sql
+- supports csv, json, orc, avro, parquet (build on presto)
+- price: $5.00 per TB of data scanned
+- use compressed or columnar data for cost saving
+- uses: BI, analyze and query VPC flow, Logs, cloudtrail trails etc
+
+--- 
+
+# 102: QuickSight Overview
+- serverless, ml powered BI service to create dashboards
+- fast, auto scale, embeddable, per session pricing
+- uses:
+  - Biz analytics
+  - building viz
+  - perform ad hoc analysis
+  - get BI using data
+ 
+- integrated with RDS, aurora, athena, redshift, s3
+
+--- 
+
+# 103: DocumentDB
+- AWS implementation of MongoDB (noSQL)
+- similar deployment concepts as Aurora
+- Fully Managed, highly av with replication across 3 AZ
+- auto-scales with step of 3GB
+- mil of requests per seconds
+
+---
+
+# 104: Neptune Overview:
+- fully managed graph database.
+- high AV with 3 AZ up to 15 replicas
+- build and run apps with highly connected datasets
+- can store up to billions of relations and query the graph with ms latency
+- great for storing knowledge graphs, recommendation engines, social network
+
+---
+
+# 105: Timestream Overview
+
+- time series database
+- fully managed, fast, scalable, serverless
+- store/ analyze trillions of events per day
+- built-in series analytics fxns
+
+---
+
+# 106: QLDB overview
+- Quantum Ledger Database
+- ledger is a book recording financial transactions
+- fully managed, serverless, high av, replication across AZ
+- used to review history of all the changes made to your application data over time
+- immutable entries, cryptographically verifiable
+
+---
+
+# 107: Managed Blockchain Overview
+- the difference is QLDB is centralized.
+- Blockchain makes it possible to build apps where multiple parties can execute transactions without the need of trusted, central auth
+- managed service to:
+  - join public blockchain networks
+  - create your own scalable private networks
+- compatible with Ethereum and hyperledger fabric
+
+---
+
+# 108: Glue Overview
+- managed ETL service
+- useful to prepare and transform data for analytics
+- fully serverless service
+- can do it from S3 and RDS as source
+- Glue data catalogs: catalog of databases
+  - can be used by Athena, redshift, emr
+---
+
+# 109: DMS 
+- data migration service
+- extract the source db and insert into target DB
+- quick, secure
+- source db is av during the migration
+- based on the tech of src db and target db: homogeneous and heterogeneous migrations (automatically converts the data)
+
+
+---
+
 
