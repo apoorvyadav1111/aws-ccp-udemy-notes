@@ -8,3 +8,5 @@ These notes are jotted down while I am studying for AWS CCP exam. I take them wh
 - [Section 6 - EC2 Storage](/aws-ccp-udemy-notes/section-6-ec2-intance-store)
 - [Section 7 - ELB & ASG](/aws-ccp-udemy-notes/section-7-elb-asg)
 - [Section 8 - Amazon S3](/aws-ccp-udemy-notes/section-8-s3)
+- [Section 9 - Databases & Analytics](/aws-ccp-udemy-notes/section-9-db-&-analytics)
+  
