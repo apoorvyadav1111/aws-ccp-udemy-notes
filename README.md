@@ -11,5 +11,5 @@ These notes are jotted down while I am studying for AWS CCP exam. I take them wh
 - [Section 9 - Databases & Analytics](/aws-ccp-udemy-notes/section-9-db-&-analytics)
 - [Section 10 - Other computer services](/aws-ccp-udemy-notes/s-10-ecs-lambda-batch-lightsail)
 - [Section 11 - Deployments](/aws-ccp-udemy-notes/section-11-deployments-&-managing-infra)
-- [Section 11 - AWS Global Infra](/aws-ccp-udemy-notes/section-12-global-infra)
+- [Section 12 - AWS Global Infra](/aws-ccp-udemy-notes/section-12-global-infra)
 
