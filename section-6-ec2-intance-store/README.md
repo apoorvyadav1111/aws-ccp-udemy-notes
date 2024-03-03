@@ -16,7 +16,7 @@
 - Its a network drive
 - bit latency
 - can be detached and attached to another instance
-- is locked to an AZ, hence camt be attached to instance in another AZ
+- is locked to an AZ, hence cant be attached to instance in another AZ
 - Have a provisioned capacity in GBS, IOPS
 - get billed for all the provisioned capacity
 - Can attach more than one EBS to one EC2 instance
@@ -146,7 +146,7 @@ Now we have faster boot, setup on the first time.
 
 ---
 
-# 58: EBS Overview
+# 58: EFS Overview
 
 - network file systems
 - Elastic File System
