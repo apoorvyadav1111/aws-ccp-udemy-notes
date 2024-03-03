@@ -157,11 +157,10 @@ Now we have faster boot, setup on the first time.
 
 ### EBS vs EFS
 
-
  EBS | EFS 
  ---|---
  Need to make a snapshot to move to AZ, not a sync but a replica | Shared by everything mounted to it
-
+ 
  ### EFS Infrequent Access EFS-IA
  - Storage class that is cost optimized for files not accessed every day
  - up to 92% cost compared to EFS Standard
@@ -173,6 +172,7 @@ Now we have faster boot, setup on the first time.
 --- 
 
 # 59: Shared Responsiblity Model for EC2 Storage
+
 AWS | EC2 Storage
 ---|---
 Infra | Setttng up backup / snapshot procedure
