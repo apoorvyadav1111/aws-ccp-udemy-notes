@@ -175,5 +175,89 @@
 
 ---
 
+# 132: AWS Cloud9
+- Cloud IDE
+- within web
+- pair programming
+
+---
+
+# 133: CodeStar & Cloud9
+
+- Go to Code commit
+- Checkout all the tools
+- Use Codestar
+- create a project
+- create a service role
+- choose a template > Flask
+- Give a name
+- Create a key pair
+- Setup up cloud9
+- create a cloud9 environment
+- Can integrate JIRA
+
+---
+
+# 134: Systems manager (SSM)
+- manage ec2 instances and on-premise systems at scale
+- another hybrid aws service
+- suite of 10+ products
+- features are:
+  - patching automation for enhanced compliance
+  - run commands across an entire fleet of service
+  - store parameter config with SSM parameter store
+- works for linux, windows, macos, raspberry Pi OS
+
+### How does it work?
+- install ssm agent on the systems we want to control
+- installed by default on Amazon Linux AMI and some Ubuntu AMI
+- if an instance can't be controlled by SSM, probably an issue with the agent
+
+---
+
+# 135: SSM Session Manager
+- allows you to start a secure shell on your ec2 and on premise server
+- no ssh access, bastion hosts or ssh keys needed
+- no port 22 needed (secure)
+- supports Linux, macOS, windows
+- send session data to s3 or cloudwatch logs
+
+- Hands on
+  - create a new ec2 instance , disallow all traffic
+  - in advanced settings, go to IAM instance profile > create a new profile
+    - create a role
+    - aws service
+    - ec2
+    - choose AmazonSSMManagedInstanceCore
+    - create
+  - select the newly created role
+  - launch the instance
+  - go to SSM
+  - go to fleet manager > all instances registered with ssm are listed
+  - go to session manager > start a session on the ec2 instance
+  - 3 ways to access ec2 instance
+    - ssh keys + ssh from terminal
+    - ec2 instance connect (still need open port 22)
+    - ssm (need an iam role)
+   
+--- 
+
+# 136: SSM Parameter Store
+
+- secure storage for config and secrets (api keys, passwords)
+- serverless, scalable, durable, easy SDK
+- control access permissions via IAM
+- version tracking and encryption
+- integrated with KMS
+
+- Hands On
+  - go to parameter store
+  - create a parameter
+  - give name and choose standard
+  - choose string
+  - enter the value
+ 
+---
+
 
 
