@@ -1,5 +1,9 @@
 # Section 9: Database & Analytics
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
+---
+
 # 91: Database Introduction
 - storing data on disk(efs,ebs,ec2 is,s3) can have its limits
 - in db:
