@@ -1,5 +1,9 @@
 # Section 11: Deployments & Managing Infra
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
+---
+
 # 121: CloudFormation Overview
 - declarative way of outlining your aws infra for most resources
 - cloudformation creates the infra in the config and order you specified
