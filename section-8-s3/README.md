@@ -1,5 +1,8 @@
 # Section 8: Amazon S3
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
+---
 # 71: S3 Overview
 - main building blocks of AWS
 - infinite scaling
