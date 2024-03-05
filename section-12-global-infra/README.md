@@ -1,5 +1,9 @@
 # Section 12: AWS Global Infra
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
+---
+
 # 138: Why?
 - app deployed in multiple geographies
 - could be regions or edge locations
