@@ -13,4 +13,5 @@ These notes are jotted down while I am studying for AWS CCP exam. I take them wh
 - [Section 11 - Deployments](/aws-ccp-udemy-notes/section-11-deployments-&-managing-infra)
 - [Section 12 - AWS Global Infra](/aws-ccp-udemy-notes/section-12-global-infra)
 - [Section 13 - Cloud Integrations](/aws-ccp-udemy-notes/section-13-cloud-integrations)
-
+- [Section 14 - Cloud Monitoring](/aws-ccp-udemy-notes/section-14-cloud-monitoring)
+- [Section 15 - VPC & Networking](/aws-ccp-udemy-notes/section-15-vpc-&-networking) 
