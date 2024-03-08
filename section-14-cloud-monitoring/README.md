@@ -70,3 +70,100 @@
 
 # 160: CloudWatch Logs Hands On
 - go to CW logs
+
+---
+
+# 161: Eventbridge (Formarly CW Events)
+- react to events between aws events
+- schedule: cronjobs (scheduled scripts)
+- event pattern: event rules to react to a service doing something. ex: IAM root user sign -> sns topic with notification
+- default eventbus: from aws services
+- but can also get events from partners from AWS using partner event bus.
+- Plug in custom event bus and use custom event bus
+- schema registry: model event schema
+- you can archive events sent to the bus and replay them
+
+---
+
+# 162: Eventbridge Hands On
+- Go to the console, create a rule
+- create in aws eventbridge scheduler
+- choose repeat, frequency of 1 hour
+- choose target as lambda
+- select a lambda function
+- choose defaults
+- create schedule
+- can create a loginevent rules, ec2 termination event
+
+--- 
+
+# 163: CloudTrail
+- provides governance, compliance, and audit for your aws account
+- enabled by default
+- get a history of events/api calls made within your aws account by
+  - console
+  - sdk
+  - cli
+  - aws services
+- can put logs from cloudtrail into cloudwatch logs or s3
+- a trail can be applied to all regions or a single region
+- investigate cloudtrail
+
+--- 
+
+# 164: Cloudtrail hands on
+- go to cloutrail on the console
+
+--- 
+
+# 165: X-Ray
+- debugging in production, the good way
+  - test locally
+  - add log statements
+  - re deploy
+- log format differ and analysis is hard
+- monolith is easy but distributed is hard
+
+### Benefits
+- visual analysis of apps
+- understand dependencies in a microservices architecture
+- pinpoint service issues
+- review request behavior
+- find error and exceptions
+- are we meeting time SLA?
+- throttling
+- identify users that are impacted
+
+---
+
+# 166: Amazon CodeGuru
+- ML powered service
+- auto code reviews
+- app performance recommendation
+- codeguru reviewer:
+  - automated code reviews for static code analysis (dev)
+- codeguru profiler: visibility/recommendations about application performance during runtime (prod)
+  - understand run time behavior
+  - id if app is consuming extensive cpu for long time
+  - id and remove inefficiencies
+  - reduce cpu utilization
+  - decrease compute cost
+  - provide heap summary
+  - anomaly detection
+ 
+---
+
+# 167: AWS Health Dash: Service History
+
+- alerts and remediation guidance when aws is experiencing events that might impact you
+- general status of aws services, personalized view of performance and availability of the aws services underlying your aws resources
+- displays relevant and timely info to help you manage events in progress and proactive notification to plan
+
+---
+
+# 168: AWS Health Dash Hands On
+
+- Click on Bell and click on the Event log
+- Service history for all aws services for all region for all the time
+- Your account health is for your resources
+- 
