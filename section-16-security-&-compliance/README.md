@@ -185,3 +185,77 @@
   ---
 
 # 188: ACM Overview
+- easily provision, SSL, TLS certificate
+- provide in flight encryption https
+- our ALB will use http to connect to ASG, but we can use ACM to provision and maintain TLS certificate and allow HTTPS connection from client to ALB
+- supports both public and private TLS Certificates
+- free of charge for public tls certs
+- auto TLS certs renewal
+- integration with load TLS on ELB, CF, Api Gateway
+
+---
+
+# 189: Secrets manager overview
+- never service, meant for storing secrets
+- capable to force secrets rotation every x days
+- auto generate secrets on rotation (lambda)
+- integration with aws rds (MySQL, postgres, aurora)
+- secrets are encrypted using KMS
+- mostly meant for RDS integration
+- paid service
+- go the console >
+  - click store a new secret
+  - select RDS
+  - choose database, rotation policy and create
+ 
+---
+
+# 190: Artifact Overview
+- not really a service 
+- on demand access to aws compliance documentation and aws agreement
+- artifact reports: allows you to download aws security and compliance documents from 3rd party auditors like aws iso certifications, payment card industry, system and organization control
+- artifact agreements: review, accept, track status of aws agreements  for an individual account or in your organization
+- can be used to support internal audit or compliance needs
+- GLOBAL service
+
+---
+
+# 191: GuardDuty Overview
+- intelligent threat discovery to protect your aws account
+- uses ML
+- one click enable
+- 30 days trial
+- input data includes:
+  - cloudtrail event logs: unusual api calls, unauth deployments
+  - vpc flow logs: unusual internal traffic, unusual IP address
+  - dns logs: compromised ec2 instances
+  - optional features: EKS audit logs, rds & aurora, ebs, lambda
+- can setup eventbridge rules to be notified in case of finding
+- eventbridge rules can target aws lambda or SNS
+- can protect against cryptocurrency attacks (has a dedicated "finding" for it)
+
+---
+
+# 192: Inspector Overview:
+- auto security assessments
+- for ec2 instances:
+  - leverage aws system manager agent
+  - analyse against unintended n/w accessibility
+  - analyze the running OS against known vulnerability
+- for container images push to amazon ecr
+  - assessment of container images as they are pushed
+- for lambda functions
+   - identifies software vulnerabilites in fxn code and package dependencies
+   - assessment of fxns as they are deployed
+ 
+- report and integration with AWS security hub
+- send findings to amazon event bridge
+
+### what does it evaluate?
+- only for running ec2 instances, container images and lambda fxns
+- continous scanning of the infra, only when needed
+- package vulnerabilities (ec2, ecr, lambda & database of CVE)
+- n/w reachability
+- risk score is associated with all the vulnerabilites for prioritization
+
+---
