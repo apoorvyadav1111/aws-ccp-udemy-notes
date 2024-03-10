@@ -259,3 +259,78 @@
 - risk score is associated with all the vulnerabilites for prioritization
 
 ---
+
+# 193: Config Overview
+- helps with audit and recording compliance of ur aws resources
+- helps record config changes over time
+- possible to store in s3 and get it analyzed with athena
+- ex:
+  - is there unrestricted ssh access to my security group
+  - do my buckets have public access?
+  - ALB config changed over time
+ 
+- You can receive alerts (SNS) for any changes
+- per region service
+- can be aggregated for all regions and all accounts
+- can see the changes made for making compliant or non compliant
+  
+---
+
+# 194: Macie Overview
+- fully managed data security and data privacy service using ML and pattern matching to discover and protect PII
+- helps ID and alerting you for PII using eventbridge notifications
+
+---
+
+# Security hub Overview
+- central security tool to manage security across several aws accounts and automate security checks
+- integrated dashboards showing current security and compliance status to quickly take actions
+- automatically aggregates alerts in predefined or personal findings formats from various aws services & aws partner tools
+- 30 days trial
+
+---
+
+# 196: Amazon Detective Overview
+- guard duty, macie, security hub are used to id potential issue
+- sometimes u need deeper analysis
+- amazon detective analyzes, investigates, quickly identifies the root cause of security issues or suspicious activities using ML and graphs
+- automatically collects and processes events from VPC flow logs, cloud trail, guardduty and create a unified view
+
+---
+
+# AWS abuse
+- report suspected aws resources used for abusive or illegal purposes
+- like:
+  - spam emails
+  - port scanning
+  - dos ddos
+  - intrusion
+  - hosting objectionable or copyrighted content
+  - distributing malware
+ 
+---
+
+# Root User Privileges
+- root user has complete access to all aws services and resources
+- actions can be performed by root:
+  - change account settings
+  - view tax invoicees
+  - restore Iam permissions
+  - change or cancel aws support plan
+  - register as a seller in the reserved instance marketplace
+  - configure s3 bucket to enable mfa
+  - sign up for gov cloud
+ 
+---
+
+# 199: IAM Access Ananlyze
+- find out resources are shared externally
+- define zone of trust = aws account or organization
+- access outside of zone of trusts => findings
+- go to access analyzer -
+  - give name, zone of trust, create
+- go to findings and act accordingly
+- can create an archive rules for intended access
+
+----
+
