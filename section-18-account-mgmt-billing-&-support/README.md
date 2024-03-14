@@ -167,4 +167,105 @@
   - added cost per GB per month
 - data transfer out of the EBS
 - 
-  
+
+### Database pricing - RDS
+- per hour billing
+- db characteristics: engine, size, memory class
+- purchase type: on-demand, reserved instances: 1 or 3 year
+- additionaly storage
+- number of i/o per month
+- deployment type
+- data transfer out are charged and tiered for volume discounts
+
+### CF
+- pricing is different across different global locations
+- the more you use the more its cheaper
+- pay for data transfer out
+- number of http/https requests
+
+### N/W cost
+- same az: free if using private ip
+- different az: 0.01$ per GB if private ip
+- 0.02 if using public Ip
+
+# 221: Savings Plan
+- commit a $ per hour for 1 or 3 year
+- for long term commitments on AWS
+- EC2 Saving plans
+  - up to 72% discount compared to on demand
+  - commit to usage of individual families  in a region
+  - regardless of AZ, size, or OS
+- Compute Savings plan
+  - up to 66%
+  - regardless of family, region, os, tenancy, compute options
+  - compute options, ec2, fargate, lambda
+- ML savings plan
+  - sagemaker,
+  - setup from Aws cost explorer console
+ 
+---
+
+# 222: Compute Optimizer Overview
+- used to reduce costs by recommending optimal aws resources for your workloads
+- uses ML to analyze your resources configurations and their utilizations cloud watch metrics
+- supports: ec2, asg, ebs volumes, lambda fxns
+- lower costs by up to 25%
+
+---
+
+# 223: billing and costing tools Overview
+- estimating costs in the cloud
+  - pricing calculator
+- tracking costs
+  - billing dash
+  - cost allocation tags
+  - cost and usage reports
+  - cost explorer
+- monitoring against cost plans
+  - billing alarms
+  - budgets
+ 
+--- 
+
+# 224: Estimating Costs in the Cloud
+- estimate the cost for your solution arch
+- go to calculator.aws
+
+---
+
+# 225: Tracking Costs in the cloud
+- Go to billind and cost management
+- Go to Free Tier
+- Cost Allocation tags
+  - group costs
+  - detail level
+  - aws generated tags, applied automatically aws:
+  - user defined tags, user:
+  - tags are used for organizing resources
+  - free naming, comman tags are name, env, team
+  - can be used to create resource groups
+  - manage these using tag editor
+  - Go to resource groups
+     - open tag editor
+    - create resource group
+  - go to billing and cost management > cost allocation tags
+- cost and usage report
+  - deeper dive
+  - most comprehensive
+  - lists usage for each service category used by account and its iam users in hourly or daily line items, as well as any tags that you have activated for cost allocation purposes
+  - can be integrated
+- cost explorer
+  - visualize, understand and manage your aws costs and usage over time
+  - create custom reports that analyze cost and usage data
+  - analyze your data at a high level: total costs and usage across all accounts
+  - choose an optimal savings plan
+  - forecast usage up to 12 months
+ 
+- cost analysis:
+  - data exports
+- cost explorer
+- Billing Alarms in Cloudwatch
+  - billing data metric is stored in cloudwatch us-east-1
+  - billing data for overall aws costs
+  - its for actual cost and not projected.
+
