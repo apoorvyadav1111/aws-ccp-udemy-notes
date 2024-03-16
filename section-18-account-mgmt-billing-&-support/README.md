@@ -264,8 +264,100 @@
 - cost analysis:
   - data exports
 - cost explorer
+
+---
+
+# 226: Monitoring Costs in the Cloud
+
 - Billing Alarms in Cloudwatch
   - billing data metric is stored in cloudwatch us-east-1
   - billing data for overall aws costs
   - its for actual cost and not projected.
+  - intended as simple alarm (not as powerful as aws budgets)
 
+- AWS Budgets:
+  - create budget and send alarms when costs exceed the budget
+  - 4 types of budget: Usage, Cost, Reservation and Savings Plan
+  - For reserved instances, RI
+    - track utilization
+    - supports ec2, elasticache, rds, redshift
+    - up to 5 sns notification
+    - can filter by service, linked account, purchase option, instance type, region, az, api operation etc
+    - same options as aws cost explorer
+    - 2 budgets are free, then 2 cents per day per budget
+   
+---
+
+# 227: AWS Cost Anomaly Detection
+- monitor cost and usage data and uses ML to detect unusual trends
+- learns ur unique, historic spend patterns, to detect one time cost spike and cost spikes,
+- monitor aws services, member accounts, cost allocation tags, cost categories
+- sends report with RCA
+- get notification
+
+---
+
+# 228: AWS service quotas
+- notify you when you are close to a service quota value threshold
+- create cloudwatch alarms on the service quotas console
+- lambda concurrent executions
+- request a quota increase from aws service quotas or shutdown
+
+---
+
+# 229: AWS Trusted Advisor
+- high level aws account assessment
+- grouped in 6 categories
+  - cost optimization
+  - performance
+  - security
+  - fault tolerance
+  - service limits
+  - operational excellence
+
+---
+
+# 230: Support plans for aws
+- basic support: free
+  - customer service & communities: 24x7 access to customer service, documentation, whitepapers and support forums
+  - aws trusted advisor: access to the 7 core trusted advisor checks and guidance to provision your resources following best practices to increase performance and improve security
+  - aws personal health dashboard
+- 4 plans:
+  - aws developer plan:
+    - business hour email access
+    - unlimited cases / 1 primary contact cloud support associate
+    - case severity/ response times:
+       - general  <24 hours
+       - system impared: <12 hours
+  - aws business plan:
+    - trusted advisor: full set of checks + API
+    - 24x7 phone, email and chat access to cloud support engineers
+    - unlimited cases and contacts
+    - access to infra event management for additional fee
+    - case severity/ response times:
+       - general: <24 hrs
+       - system impaired: <12 hrs
+       - prod system impaired: < 4 hrs
+       - prod system down < 1 hrs
+  - aws enterprise on-ramp support plan:
+    - access to pool of technical account managers (TAM)
+    - concierge support team for billing and best practices
+    - infra event management, well architected and operations review
+    - case severity/ response times:
+       - general: <24 hrs
+       - system impaired: <12 hrs
+       - prod system impaired: < 4 hrs
+       - prod system down < 1 hrs
+       - business system down < 30 mins
+  - aws enterprise support plan (24/7)
+     - mission critical loads
+     - ++ all from prev
+     - access to designated TAM
+     - case severity/ response times:
+       - general: <24 hrs
+       - system impaired: <12 hrs
+       - prod system impaired: < 4 hrs
+       - prod system down < 1 hrs
+       - business system down < 15 mins
+
+---
