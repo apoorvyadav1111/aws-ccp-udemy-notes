@@ -16,5 +16,6 @@ These notes are jotted down while I am studying for AWS CCP exam. I take them wh
 - [Section 14 - Cloud Monitoring](/aws-ccp-udemy-notes/section-14-cloud-monitoring)
 - [Section 15 - VPC & Networking](/aws-ccp-udemy-notes/section-15-vpc-&-networking) 
 - [Section 16 - Security & Compliance](/aws-ccp-udemy-notes/section-16-security-&-compliance)
-- [Section 17 - Machine Learning](/aws-ccp-udemy-notes/section-17-machine-learning) 
+- [Section 17 - Machine Learning](/aws-ccp-udemy-notes/section-17-machine-learning)
+- [Section 18 - Account Management, Billing & Support](/aws-ccp-udemy-notes/section-18-account-mgmt-billing-&-support)
 - 
