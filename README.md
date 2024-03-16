@@ -18,4 +18,4 @@ These notes are jotted down while I am studying for AWS CCP exam. I take them wh
 - [Section 16 - Security & Compliance](/aws-ccp-udemy-notes/section-16-security-&-compliance)
 - [Section 17 - Machine Learning](/aws-ccp-udemy-notes/section-17-machine-learning)
 - [Section 18 - Account Management, Billing & Support](/aws-ccp-udemy-notes/section-18-account-mgmt-billing-&-support)
-- 
+- [Section 19 - Advanced Security](/aws-ccp-udemy-notes/section-19-advanced-security/)
