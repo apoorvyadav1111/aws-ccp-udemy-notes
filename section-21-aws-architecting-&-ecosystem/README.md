@@ -134,5 +134,90 @@
  
 ----
 
-# 265: 
+# 265: AWS Cloud Adoption Framework (AWS)
+- help you build and execute a comprehensive plan for your digital transformation via use of AWS
+- identifier the specific organizational capabilites that underpin successful cloud tfxm
+- caf groups its capabilities in 6 perspectives:
+   - business
+   - people
+   - governance
+   - platform
+   - security
+   - operations
+- Business Perspective ensure your cloud investments accelarate your digital transformation ambitions and business outcomes
+- People perspective serves as a bridge between tech and business, accelerating the cloud journey to help organizations more rapidly evolve to a culture of continous growth.
+- Governance: maximize cloud benefits and minimize transformation related risks
 
+- Technical Capabilites:
+  - Platform: helps build an enterprise grade scalable hybrid cloud, modernize workloads and implement new cloud solutions
+  - Security: helps you achieve the confidenciality integrity and availablity of your data and cloud workloads
+  - operations: helps ensure that your cloud services are delivered at a level that meets the needs of your business
+
+- Transformation Domains:
+  - Tech: using cloud to migrate and modernize legacy infrastructure, apps, data, and analytics platforms
+  - Process
+    - digitizing, automating, and optimizing your business operations
+    - using ML to improve Customer Service Ex
+  - organization:
+    - reimagine your business model by creating new value
+    - organize your teams around products and value streams
+  - products:
+    - creating new values
+
+- Transformation Phases
+   - Envision: demonstrate cloud will accelerate business outcomes by IDing transformation opportunities and create a foundation for your digital transformation
+   - Align: ID capablity gaps across the 6 CAF perspectives which results in action plan
+   - Launch: build and deliver pilot initiates in prod and demonstrate incremental business value
+   - Scale: expand pilot initiatives to the desired scale when realizing the desired business benefits
+
+---
+
+# 266: Right Sizing
+- matching instance size to workloads
+- right sizing it start small and scale up
+- looking at deployed instances and downsize if neccessary
+- Its important to right size
+  - before cloud migration
+  - continously
+    
+---
+
+# 267: AWS Ecosystem
+- AWS Blogs
+- AWS Forums
+- Whitepapers and guides
+- Partner solutions
+  - gold standard deployments in aws clouds
+  - build prod ready env quickly using template
+  - ex: wordpress on aws
+- Aws solutions
+
+### AWS Support:
+- Dev
+- Business
+- Enterprise
+
+### AWS Marketplace
+- software listing from 3rd party
+- ex: custom ami
+- ex: saas, cf template
+- cost goes directly to your bill
+- you can sell your own solutions
+
+### AWS Training
+- digital
+- classroom/ virtual
+- private for organization
+- for US govt
+- for enterprise
+- AWS Academy: for universities
+
+### AWS professional services and partner network (APN)
+- global team of experts
+- work alongside your team
+- Partners:
+  - tech : provide h/w, connectivity and s/w
+  - consulting: help build on aws
+  - training: help you learn
+- competency program:
+- navigate program
