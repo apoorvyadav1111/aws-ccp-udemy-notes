@@ -19,3 +19,8 @@ These notes are jotted down while I am studying for AWS CCP exam. I take them wh
 - [Section 17 - Machine Learning](/aws-ccp-udemy-notes/section-17-machine-learning)
 - [Section 18 - Account Management, Billing & Support](/aws-ccp-udemy-notes/section-18-account-mgmt-billing-&-support)
 - [Section 19 - Advanced Security](/aws-ccp-udemy-notes/section-19-advanced-security/)
+- [Section 19 - Other Services](/aws-ccp-udemy-notes/section-20-other-services/)
+- [Section 21 - AWS architecting and ecosystem](/aws-ccp-udemy-notes/section-21-aws-architecting-&-ecosystem/)
+  
+
+
