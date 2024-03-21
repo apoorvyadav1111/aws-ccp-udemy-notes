@@ -215,9 +215,50 @@
 ### AWS professional services and partner network (APN)
 - global team of experts
 - work alongside your team
-- Partners:
+- APN Partners:
   - tech : provide h/w, connectivity and s/w
   - consulting: help build on aws
   - training: help you learn
-- competency program:
-- navigate program
+- competency program: granted to APN who demonstrate technical proficeincy and proven customer success in specialized solution areas
+- navigate program: helps partner become better partners
+
+---
+
+# 268: AWS IQ and re:POST
+- IQ
+  - find professional help for your aws project
+  - engage and pay aws certified 3rd party experts for on demand project work
+  - for customers:
+    submit request > review responses > select expert> work securely > pay per milestone
+  - charged directly to your bill
+  - for expert:
+    create profile > connect with customers > start a proposal > work securly > get paid
+
+- re:POST
+  - aws managed q&a forums
+  - crowdsourced and expert reviewed answers
+  - part of free tier
+  - earn reputation points
+  - not intended for time sensitive questions
+ 
+---
+
+# 269: AWS knowledge center
+- part of the re:POST portal
+- most FAQ
+
+---
+
+# 279: AWS Managed Services:
+- provides  infra and app support on AWS
+- offers a team of experts who manage and operate your infra for security, reliability and availability
+- help organizations offload routine management tasks and focus on their business objectives
+- fully managed services so AWS handles common activities
+- implements best practices and maintain your infra to reduce your overhead and risk
+- available 24*365
+
+- enable you to create a baseline, sustain, build or migrate and operate
+- contact sales team
+
+---
+
