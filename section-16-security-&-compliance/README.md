@@ -1,5 +1,7 @@
 # Section 16: Security and Compliance
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
 # 181: Shared Responsiblity Model: Reminders and Examples
 - Shared Responsibility Model
   - AWS
