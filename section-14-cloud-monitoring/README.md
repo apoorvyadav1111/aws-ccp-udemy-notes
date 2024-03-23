@@ -1,5 +1,7 @@
 # Section 14: Cloud Monitoring
 
+[🏠 Go to Home](https://apoorvyadav1111.github.io/aws-ccp-udemy-notes/)
+
 # 157: CloudWatch Metrics & CloudWatch Alarms Overview
 - cloudwatch provides metrics for every services in AWS
 - metrics have timestamps
